@@ -1,1 +1,16 @@
+#https://github.com/Bulbach/cloud-config-app-micriservice.git
+server:
+  port: 8888
 
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Bulbach/cloud-config-app-micriservice.git
+          username: Bulbach
+          password: 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
+          default-label: main
+          search-paths: "{application}"
